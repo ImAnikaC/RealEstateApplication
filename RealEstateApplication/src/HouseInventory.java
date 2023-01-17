@@ -14,8 +14,6 @@ public class HouseInventory implements InventoryMNG {
 		
 	}
 	
-	//Assumption: if they call the edit method, they want to change both price and status
-	//assuming user won't try to add a house w id that already exists
 	@Override
 	public void Edit(int id, double price) {
 		//checking to see if entered id matched 
@@ -57,8 +55,6 @@ public class HouseInventory implements InventoryMNG {
 	}
 
 	@Override
-	//assuming we don't have to display the prices in sorted order
-	//empty array list has no element so it'll return nothing. 
 	public House[] HousesBellowPrice(double p) {
 		//returns an array of houses that are below a price p.
 
@@ -88,32 +84,9 @@ public class HouseInventory implements InventoryMNG {
 		
 		return belowArray;
 	}
-
-	@Override
-	public int findMin() {
-		//this method will return the ID of house of min price.
-
-		//once this method is being called in the main you will
-		
-		//need to print the ID of being returned from this method.
-		
-		int result = 0;
-		
-		double min = allHouses.get(0).getPrice();
-		
-		for (int i = 0; i<allHouses.size(); i++) {
-			if (allHouses.get(i).getPrice()<min) {
-				min = allHouses.get(i).getPrice();
-				result = allHouses.get(i).getId();
-			}
-		}
-		
-		return result;
-	}
 	
 	
 	@Override
-	//assuming that duplicates are only two of the same prices
 	public House[] DuplicatePrice() {
 		
 		ArrayList<House> duplicate = new ArrayList<House>();

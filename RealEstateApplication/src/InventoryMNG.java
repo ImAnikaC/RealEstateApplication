@@ -8,9 +8,7 @@ public interface InventoryMNG {
 	public int Delete (int id);
 	
 	public House[] HousesBellowPrice(double p);
-	
-	public int findMin();
-	
+		
 	public House[] DuplicatePrice();
 
 }

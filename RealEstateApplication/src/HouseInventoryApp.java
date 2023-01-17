@@ -1,7 +1,6 @@
 import java.util.Scanner;
 import java.util.Arrays;
 
-//note: you don't have to use findmin in main. just write the method
 public class HouseInventoryApp {
 	public static void main(String[]args) {
 		
